@@ -118,3 +118,26 @@ r = -0.85
 уровень подготовки студента; стресс; недостаток сна; сложность экзамена; привычка пить кофе именно в напряжённые дни.
 
 Итог: Между переменными наблюдается сильная отрицательная корреляция, но делать вывод о причинно-следственной связи нельзя.
+
+
+
+
+
+```
+def is_isomorphic(s, t): if len(s) != len(t): return False
+
+map_s_to_t = {}
+map_t_to_s = {}
+
+for char_s, char_t in zip(s,t):
+    if char_s in map_s_to_t and map_s_to_t[char_s] != char_t:
+        return False
+
+    if char_t in map_t_to_s and map_t_to_s[char_t] != char_s:
+        return False
+
+    map_s_to_t[char_s] = char_t
+    map_t_to_s[char_t] = char_s
+
+return True
+```
