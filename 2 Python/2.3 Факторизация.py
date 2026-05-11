@@ -1,7 +1,6 @@
 def prime_factors(n: int) -> list:
 factors = []
 
-```
 # Обрабатываем делитель 2 отдельно
 while n % 2 == 0:
     factors.append(2)
@@ -20,7 +19,6 @@ if n > 1:
     factors.append(n)
 
 return factors
-```
 
 # Пример
 
